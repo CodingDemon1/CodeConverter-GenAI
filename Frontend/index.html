@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code Converter | Deugger | Optimization</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.41.0/min/vs/editor/editor.main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.41.0/dev/vs/editor/editor.main.min.css">
+    <style>
+        body {
+            /* background: rgb(70, 58, 160);
+            background: radial-gradient(circle, rgba(70, 58, 160, 1) 0%, rgba(45, 27, 89, 1) 55%, rgba(0, 0, 0, 1) 94%); */
+            background-color: #ccfaed;
+        }
+
+        #editorContainer,
+        #outputScreen {
+            height: 70vh;
+        }
+
+        #outputSnippet {
+            height: 50vh;
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            overflow-y: scroll;
+        }
+
+        /* #outputSnippet::first-line {
+            margin-left: 0;
+        } */
+
+        #outputScreen img {
+            width: 70px;
+
+            margin-top: 100px;
+        }
+
+        .lowerDiv div {
+            border: 1ps solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!-- place navbar here -->
+        <h1 class="text-center mt-4">Code Converter</h1>
+        <div class="container-fluid mt-4 d-flex justify-content-evenly border align-items-center p-2">
+            <div class=" d-flex">
+                <select class="form-select form-select-lg mx-2" name="" id="inputLanguage">
+                    <option selected value="">Input Language</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="cpp">C++</option>
+                    <option value="c">C</option>
+                    <option value="python">Python</option>
+                </select>
+                <select class="form-select form-select-lg" name="" id="outputLanguage">
+                    <option selected value="">Output Language</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="cpp">C++</option>
+                    <option value="c">C</option>
+                    <option value="python">Python</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false"
+                autocomplete="off" id="convertBtn">Convert</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false"
+                autocomplete="off" id="debugBtn">Debug</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="button" aria-pressed="false"
+                autocomplete="off" id="qualityCheckBtn">Quality Checker</button>
+        </div>
+    </header>
+    <main>
+        <div class="d-flex mt-4 lowerDiv">
+            <div class="container-fluid d-flex" id="editorContainer"></div>
+            <div class="container-fluid d-flex flex-column align-items-center" id="outputScreen">
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+        <p class="text-center text-primary border">Made with ❤️ by a Proudly Indian</p>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/loader.js"></script>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

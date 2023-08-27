@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code Snippet in a Div</title>
+    <style>
+        /* Add the white-space and font-family properties to preserve indentation */
+        #codeDiv {
+            white-space: pre;
+            font-family: 'Courier New', monospace;
+            background-color: #f1f1f1;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="codeDiv"></div>
+
+    <script>
+        // Function to display code with proper indentation
+        function displayCode(code) {
+            // Replace leading spaces with &nbsp; for proper indentation
+            var formattedCode = code.replace(/ /g, '&nbsp;');
+
+            // Replace leading tabs with &nbsp;&nbsp;&nbsp;&nbsp; for proper indentation
+            formattedCode = formattedCode.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+
+            // Set the formatted code inside the codeDiv
+            document.getElementById('codeDiv').innerHTML = formattedCode;
+        }
+
+        // Example code
+        var code = `public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}`;
+
+        // Display the code with proper indentation
+        displayCode(code);
+    </script>
+</body>
+
+</html>
