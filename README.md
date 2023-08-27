@@ -11,6 +11,13 @@ The Code Converter App is a versatile tool that allows users to convert, debug, 
 - Frontend: HTML, CSS, JavaScript
 - Backend: Node.js, Express.js, OpenAI API
 
+## Functionalities
+- **Code Conversion**: Convert code from one programming language to another, supporting a variety of languages.
+- **Code Debugging**: Get debugging assistance by submitting code and receiving error analysis and potential solutions.
+- **Code Quality Analysis**: Receive an analysis of code quality, consistency, performance, and documentation.
+- **User-Friendly Interface**: Intuitive interface for inputting code and choosing functionalities.
+- **Real-Time Interaction**: Communicate with the OpenAI GPT-3.5 turbo model in real time for interactive code-related tasks.
+
 ## Route Endpoints
 1. **Base Endpoint**: `/`
    - Description: Base endpoint of the application.
@@ -49,8 +56,7 @@ The Code Converter App is a versatile tool that allows users to convert, debug, 
      ```
 
 ## Screenshots
-![Screenshot 1](screenshots/screenshot1.png)
-<!-- Add more screenshots as needed -->
+- To be added
 
 ## Areas of Improvement
 - **Enhanced User Experience**: Improve the user interface and provide clearer instructions for each functionality.
